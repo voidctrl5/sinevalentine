@@ -1,0 +1,69 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0e0407;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.title {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(1.8rem, 5vw, 2.7rem);
+  color: #e02040;
+  text-shadow: 0 0 24px rgba(224, 32, 64, 0.55);
+  animation: pulse 2.2s ease-in-out infinite alternate;
+  margin-bottom: 6px;
+}
+
+@keyframes pulse {
+  from { text-shadow: 0 0 16px rgba(224, 32, 64, 0.35); }
+  to   { text-shadow: 0 0 48px rgba(224, 32, 64, 1), 0 0 90px rgba(224, 32, 64, 0.4); }
+}
+
+canvas {
+  display: block;
+}
+
+.eq {
+  font-family: 'Courier Prime', monospace;
+  font-size: clamp(0.6rem, 1.5vw, 0.8rem);
+  color: rgba(210, 90, 105, 0.82);
+  margin-top: 6px;
+  letter-spacing: 0.03em;
+}
+
+.kval {
+  font-family: 'Courier Prime', monospace;
+  font-size: clamp(0.6rem, 1.5vw, 0.76rem);
+  color: rgba(210, 90, 105, 0.58);
+  margin-top: 3px;
+}
+
+.btn {
+  margin-top: 12px;
+  padding: 6px 24px;
+  background: transparent;
+  border: 1px solid rgba(224, 32, 64, 0.4);
+  color: rgba(224, 32, 64, 0.7);
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.25s;
+}
+
+.btn:hover {
+  background: rgba(224, 32, 64, 0.1);
+  border-color: #e02040;
+  color: #e02040;
+}
